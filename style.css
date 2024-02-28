@@ -1,295 +1,282 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 body {
-  font-family: "Poppins", sans-serif;
-  /*background-color: blueviolet;*/
-  background-color: white;
-}
-p {
-  color: #000000;
-}
-nav {
-  margin: auto;
-  padding: 1rem;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  background: #edf0f1;
+  padding: 80px 0 0 0;
+  transition: all 0.5s ease-in-out;
 }
 
-.nav__logo a {
-  font-size: 1.7rem;
-  font-weight: bolder;
-  color: blueviolet;
-  text-decoration: none;
-  transition: 0.3s;
+body,
+input,
+button {
+  font-family: "Roboto", sans-serif;
 }
 
-.nav__links {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+.noFill {
+  fill: none;
 }
 
-.link a {
-  padding: 0.5rem 1rem;
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: black;
-  font-weight: bold;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.link a:hover {
-  color: blueviolet;
-}
-
-.image-container {
-  display: inline-block;
-  margin-left: 20px;
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(50px);
-  border: 2px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0 180px rgba(0, 0, 0, 0.208);
-  border-radius: 0px 15px 0px 15px;
-  width: 350px;
-  height: 350px;
-  transform: translateX(50%);
-  transition: 0.5s ease-in-out;
-}
-.image-container:hover {
-  height: 380px;
-  transition: 0.6s;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  border-radius: 20px;
-  background-color: rgba(255, 255, 255, 0.45);
-  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(15px);
-}
-.image {
-  margin: 11.5px;
-  padding: 13px;
-}
-
-img {
-  border-radius: 0px 15px 0px 15px;
-}
-
-img:hover {
-  transition: 0.6s;
-  border-radius: 20px;
-}
-
-.image:hover {
-  transition: 0.3s;
-  transform: scale(1.1);
-}
-h1 {
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: bolder;
-}
-
-.sub {
-  background-color: rgb(207, 207, 95);
-  margin-top: 20px;
-  width: 100%;
-  height: 250px;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.glitch {
-  position: relative;
-  font-size: 50px;
-  font-weight: bold;
-  color: #ffffff;
-  letter-spacing: 3px;
-  z-index: 1;
-}
-
-.glitch:before,
-.glitch:after {
-  display: block;
-  content: attr(data-text);
-  position: absolute;
+header {
+  width: 90%;
+  height: 80px;
+  padding: 15px;
   top: 0;
   left: 0;
-  opacity: 0.8;
+  z-index: 5;
+
+  background: #e0be13;
+  box-shadow: 0px 2px 4px rgba(44, 62, 80, 0.15);
+
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
 }
 
-.glitch:before {
-  animation: glitch-it 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
-  color: #002929;
-  z-index: -1;
+header input {
+  width: 100%;
+  height: 50px;
+  float: left;
+  color: #fafafa;
+  font-size: 15px;
+  font-weight: 400;
+  text-indent: 18px;
+  padding: 0 60px 0 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px 25px 25px 5px;
+  border: 0px;
+  box-shadow: none;
+  outline: none;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
-.glitch:after {
-  animation: glitch-it 0s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both
-    infinite;
+header input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+header input:-moz-input-placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+header input::-moz-input-placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+header input:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+header button {
+  width: 50px;
+  height: 50px;
+
+  position: absolute;
+  top: 135px;
+  right: 420px;
+  z-index: 2;
+
+  border-radius: 25px;
+  background: hwb(0 100% 0%);
+  border: 0px;
+  box-shadow: none;
+  outline: none;
+  cursor: pointer;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+header button svg {
+  width: 16px;
+  height: 16px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  margin: -8px 0 0 -8px;
+}
+
+header button svg .fill {
+  fill: #fdb10d;
+}
+svg:hover {
+  transform: scale(1.5);
+}
+
+.container {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+}
+
+ul.todo {
+  width: 100%;
+  float: left;
+}
+
+ul.todo li {
+  width: 100%;
+  min-height: 50px;
+  float: left;
+  font-size: 14px;
+  font-weight: 500;
+  color: #444;
+  line-height: 22px;
+
+  background: #fff;
+  border-radius: 5px;
+  position: relative;
+  box-shadow: 0px 1px 2px rgba(44, 62, 80, 0.1);
+  margin: 0 0 10px 0;
+  padding: 14px 100px 14px 14px;
+  word-break: break-word;
+}
+
+ul.todo li:last-of-type {
+  margin: 0;
+}
+
+ul.todo li .buttons {
+  width: 100px;
+  height: 50px;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+ul.todo li .buttons button {
+  width: 50px;
+  height: 50px;
+  float: left;
+  background: none;
+  position: relative;
+  border: 0px;
+  box-shadow: none;
+  outline: none;
+  cursor: pointer;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+ul.todo li .buttons button:last-of-type:before {
+  content: "";
+  width: 1px;
+  height: 30px;
+  background: #edf0f1;
+
+  position: absolute;
+  top: 10px;
+  left: 0;
+}
+
+ul.todo li .buttons button svg {
+  width: 22px;
+  height: 22px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  margin: -11px 0 0 -11px;
+}
+
+ul.todo li .buttons button.complete svg {
+  border-radius: 11px;
+  border: 1.5px solid #daa003;
+
+  transition: background 0.2s ease;
+}
+
+ul.todo#completed li .buttons button.complete svg {
+  background: #df7e08;
+  border: 0px;
+}
+
+ul.todo:not(#completed) li .buttons button.complete:hover svg {
+  background: rgba(227, 153, 5, 0.838);
+}
+
+ul.todo:not(#completed) li .buttons button.complete:hover svg .fill {
+  fill: #fff;
+}
+
+ul.todo#completed li .buttons button.complete svg .fill {
+  fill: #fff;
+}
+
+ul.todo li .buttons button svg .fill {
+  transition: fill 0.2s ease;
+}
+
+ul.todo li .buttons button.remove svg .fill {
+  fill: #c0cecb;
+}
+
+ul.todo li .buttons button.remove:hover svg .fill {
+  fill: #e85656;
+}
+
+ul.todo li .buttons button.complete svg .fill {
+  fill: #25b99a;
+}
+
+ul.todo#completed {
+  position: relative;
+  padding: 60px 0 0 0;
+}
+
+ul.todo#completed:before {
+  content: "";
+  width: 150px;
+  height: 1px;
+  background: #d8e5e0;
+
+  position: absolute;
+  top: 30px;
+  left: 50%;
+
+  margin: 0 0 0 -75px;
+}
+
+ul.todo#todo:empty:after {
+  content: "You have nothing to-do!";
+  margin: 15px 0 0 0;
+}
+
+ul.todo#completed:empty:after {
+  content: "You have yet to complete any tasks.";
+}
+
+ul.todo#todo:after,
+ul.todo#completed:after {
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-size: 12px;
   color: #ffffff;
 }
-
-@keyframes glitch-it {
-  0% {
-    transform: translate(0);
-  }
-  20% {
-    transform: translate(-2px, 2px);
-  }
-  40% {
-    transform: translate(-2px, -2px);
-  }
-  to {
-    transform: translate(0);
-  }
-}
-
-input {
-  color: #1a1a1a;
-}
-
-main {
-  min-height: 100vh;
-
-  display: grid;
-  place-items: center;
-
-  padding: 2em;
-}
-
-.subscribe-card {
-  position: relative;
-
-  padding: 3em 4em;
-  background-color: rgba(147, 147, 147, 0.311);
-  backdrop-filter: blur(10px);
-  border: 2px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
-  border-radius: 0px 15px 0px 15px;
-
-  display: grid;
-  row-gap: 1.6em;
-
-  transition: all 0.4s ease-in-out;
-}
-
-.subscribe-card:hover {
-  transform: scale(1.4);
-  transition: 0.5s;
-}
-
-.subscribe-card > h2 {
-  color: #057ca0;
-
-  font-weight: 800;
-  font-size: 1.8em;
-
-  text-align: center;
-}
-
-.subscribe-card > p {
-  line-height: 1.8;
-  font-weight: 400;
-
-  text-align: center;
-
-  opacity: 0.9;
-}
-
-.form-email {
-  margin-top: 1em;
-
-  display: grid;
-  row-gap: 1.6em;
-}
-
-.input-email {
-  padding: 1em;
-
-  background-color: #ecf2ff;
-
-  border: none;
-  outline: none;
-  border-radius: 7px;
-
-  font-weight: 500;
-}
-
-.error-message {
-  font-size: 0.8em;
-  font-weight: 400;
-
-  color: red;
-
-  display: none;
-}
-
-.input-email:not(:placeholder-shown):invalid ~ .error-message {
-  display: block;
-}
-
-.send-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  gap: 1em;
-  padding: 0.8em;
-
+.text {
   color: white;
-  background-color: blueviolet;
-
-  border: none;
-  border-radius: 7px;
-
-  font-weight: 600;
-
-  cursor: pointer;
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.pp {
-  color: #1a1a1a;
-}
-
-.footer {
-  background-color: #010f0f21;
-  width: 100%;
+#main {
+  top: 80px;
+  background-color: #2d97e3;
+  width: 50%;
   height: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: 0.8s ease-in-out;
 }
 
-dt {
-  text-transform: uppercase;
-}
-.footer,
-.fot_tex {
-  font-weight: bolder;
-  font-family: "Poppins", sans-serif;
-  color: #330048;
-  text-align: center;
-  padding: 30px 0px 30px 0px;
-  font-size: 30px;
-}
-
-.banner {
-  background: url(./assets/OIG3.jpeg);
-  background-size: 990px;
-  background-position-x: center;
-  width: 100%;
-  height: 350px;
-  transition: 0.4s;
-}
-.banner:hover {
-  background-size: 1100px;
-  background-position-y: -100px;
-  transition-timing-function: ease-in;
-  transition: 0.5s;
+#main:hover {
+  border-radius: 30px;
+  transition: all 0.4s ease-in-out;
 }

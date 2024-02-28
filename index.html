@@ -1,147 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link  rel="stylesheet" href="style.css">
-    <title>Landing page</title>
-</head>
-<body>
-
-   <nav>
-    <div class="nav__logo"><a href="#">Today News</a></div>
-    <ul class="nav__links">
-      <li class="link"><a href="#">Home</a></li>
-      <li class="link"><a href="#cont">About Us</a></li>
-      <li class="link"><a href="#subscr">Subscribe</a></li>
-    </ul>
-  </nav>
-
-  <div class="banner">
+<html>
+	<head>
+       
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+       
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        
+		<title>Todo list app</title>
   
-  </div>
+		    
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
 
-  <br><br><br>
-  <br>
-<h1>technology news</h1>
-<br><br><br>
-<div class="image-container">
-  <div class="image">
-    <img src="./assets/t01.jpg" width="300">
-    <p>An Apple user has praised the new VisionPro headset, which introduced more than 600 apps and allowed him to use his monitor while also viewing a movie projected into thin air1</p>
-  </div>
+	
+		<link rel="stylesheet" type="text/css" href="resources/css/reset.min.css">
+		<link rel="stylesheet" type="text/css" href="resources/css/style.css">
+	</head>
+	<body>
+
+	<div id="main">
+
+<div>
+	<h1 class="text">To-do List</h1>
 </div>
+		<header>
+			<input type="text" placeholder="Enter an activity.." id="item">
+			<button id="add">
+				<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve"><g><path class="fill" d="M16,8c0,0.5-0.5,1-1,1H9v6c0,0.5-0.5,1-1,1s-1-0.5-1-1V9H1C0.5,9,0,8.5,0,8s0.5-1,1-1h6V1c0-0.5,0.5-1,1-1s1,0.5,1,1v6h6C15.5,7,16,7.5,16,8z"/></g></svg>
+			</button>
+		</header>
 
-<div class="image-container">
-  <div class="image">
-    <img src="./assets/t02.jpg" width="300">
-    <p>Google has introduced its LLM model called Gemini, which includes three versions: Gemini Nano, Gemini Pro, and Gemini Ultra</p>
-  </div>
-</div>
+		<div class="container">
+			
+			<ul class="todo" id="todo"></ul>
 
-<div class="image-container">
-  <div class="image">
-    <img src="./assets/t03.jpg" width="300">
-    <p>Snapchat’s parent company is laying off 10 percent of its staff, marking the latest tech company to make cuts in 2024</p>
-  </div>
-</div>
-<br><br>
-
-<br><br>
-<h1>Sports news</h1>
-<br><br>
-<div class="image-container">
-  <div class="image">
-    <img src="./assets/s1jpg.jpg" width="300">
-    <p>Olympic medallist Lovlina Borgohain was disqualified in the third round of her pre-quarter-final match at the 75th Strandja Memorial Tournament after receiving three warnings for excessive grappling</p>
-  </div>
-</div>
-
-<div class="image-container">
-  <div class="image">
-    <img src="./assets/s2.jpg" width="300">
-    <p>Ishan Kishan needs to decide when he will start playing “some form of cricket” to be considered for national selection, according to head coach Rahul Dravid</p>
-  </div>
-</div>
-
-<div class="image-container">
-  <div class="image">
-    <img src="./assets/s3.jpg" width="300">
-    <p>The England cricket team has decided to travel to Abu Dhabi for a short camp and return to India just ahead of the third Test that begins in Rajkot</p>
-  </div>
-</div>
-
-
-<br><br>
-<br><br>
-<h1>Entertinment news</h1>
-<br><br>
-<div class="image-container">
-  <div class="image">
-    <img src="./assets/e1.jpg" width="300">
-    <p>Fighter Box Office 2nd Monday: Siddharth Anand’s Fighter, starring Hrithik Roshan, Deepika Padukone, Anil Kapoor, and others, netted around Rs 2.75 - 3 crores on its second Monday, bringing the total to Rs 170 crores in 12 days in India</p>
-  </div>
-</div>
-
-<div class="image-container">
-  <div class="image">
-    <img src="./assets/e2.jpg" width="300">
-    <p>Raaju Bonagaani’s Movies: Two much-anticipated movies directed by Raaju Bonagaani and produced by Jayaram Devasamudra are ready to hit cinemas</p>
-  </div>
-</div>
-
-<div class="image-container">
-  <div class="image">
-    <img src="./assets/e3.jpg" width="300">
-    <p>Teri Baaton Mein Aisa Uljha Jiya: Directed by Amit Joshi and Aradhana Sah, this upcoming Bollywood romantic-comedy film stars Kriti Sanon alongside Shahid Kapoor</p>
-  </div>
-</div>
-<br>
-<br>
-
-
-<br><br>
-
-<div class="sub">
-  <div class="glitch" data-text="Stay tuned,follow for more news">Stay tuned,follow for more news</div>
-</div>
-
-
-<main>
-  <div class="subscribe-card" id="subscr">
-    <h2>Stay tuned</h2>
-    <p class="pp">
-      Subscribe to get the daily News <br />update 
-
-    </p>
-
-    <form class="form-email">
-      <input type="email" aria-label="Email to subscribe" 
-             placeholder="email@example.com" 
-             class="input-email" required>
-
-      <p role="alert" class="error-message">
-        *Please enter a valid email address!
-      </p>
-      
-      <button type="submit" class="send-button">
-        Subscribe now
-      </button>
-    </form>
-  </div>
-</main>
-
-
-<div class="footer" id="cont">
-  <p class="fot_tex">
-    <dl>
-      <dt>contact</dt>
-      <dd>
-        whatsapp No:+98 939884323<br>
-        Mail:email@example.com
-      </dd>
-    </dl>
-  </p>
-</div>
-
-</body>
+			<ul class="todo" id="completed"></ul>
+		</div>
+	</div>
+		
+		<script src="resources/js/main.js"></script>
+	</body>
 </html>
